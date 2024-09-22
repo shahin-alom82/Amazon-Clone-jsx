@@ -39,7 +39,7 @@ const Header = () => {
                                     </Link>
 
                                     {/* Location */}
-                                    <div className='flex items-center gap-2 mt-2 lg:mt-0'>
+                                    <div className='flex items-center gap-2 mt-2 lg:mt-0 '>
                                           <SlLocationPin size={25} />
                                           <div className='text-sm'>
                                                 <h1>Deliver to</h1>
@@ -58,7 +58,7 @@ const Header = () => {
                                     {
                                           session?.user ? <div className='mt-4 lg:mt-0 flex items-center gap-2'>
                                                 <div className="">
-                                                      <Image className="h-10 w-10 rounded-full" src={session?.user.image} alt="userImage" width={200} height={200} />
+                                                      <Image className="lg:h-10 lg:w-10 h-2 w-6 rounded-full" src={session?.user.image} alt="userImage" width={200} height={200} />
                                                 </div>
                                                 <div>
                                                       <h1 className=''>Hello, {session?.user?.name}</h1>
@@ -79,7 +79,7 @@ const Header = () => {
                                     }
 
                                     {/* Marked & Favorite */}
-                                    <div className=' mt-4 lg:mt-0'>
+                                    <div className=' mt-4 lg:mt-0 hidden md:block'>
                                           <h1 className='flex items-center gap-2 text-sm'>
                                                 Marked
                                                 <span className='border border-red-400 text-red-400 px-2 flex items-center justify-center h-4 w-4 text-xs'>0</span>
