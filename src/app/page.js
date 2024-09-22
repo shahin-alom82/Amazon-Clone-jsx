@@ -1,4 +1,3 @@
-"use client"
 import CarouselBanner from '@/components/CarouselBanner';
 import ProductList from '@/components/ProductList';
 import { fetchData } from '@/hooks';
