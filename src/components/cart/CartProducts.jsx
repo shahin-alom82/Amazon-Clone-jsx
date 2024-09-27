@@ -20,7 +20,7 @@ const CartProducts = () => {
                                           </h1>
                                     </div>
                                     <div className="flex flex-col lg:flex-row justify-between gap-6 mt-10">
-                                          <div className="lg:w-2/3 w-full border-t-2 border-r-2 lg:border-r-2 border-l-2 border-amazonYellow ">
+                                          <div className="lg:w-2/3 w-full">
                                                 {cart.map((product) => (
                                                       <CartProduct key={product?.id} product={product} />
                                                 ))}

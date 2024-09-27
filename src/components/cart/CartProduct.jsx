@@ -18,11 +18,11 @@ const CartProduct = ({ product }) => {
             toast.success(`${product?.title.substring(0, 10)} deleted successfully!`)
       }
       return (
-            <Container className="flex flex-col lg:flex-row md:flex gap-4 border-b-2 border-amazonYellow relative">
+            <Container className="flex flex-col lg:flex-row md:flex gap-4 border-t-2 border-gray-200 relative">
                   {/*product Image start */}
                   <div className="lg:flex flex items-center justify-center">
                         <Link className="" href={{ pathname: `/product/${product.id}`, query: { id: product.id } }}>
-                              <Image className="h-48 w-48 lg:border-r-2 border-amazonYellow cursor-pointer" src={product?.images[0]} alt="cartImage" height={200} width={200} />
+                              <Image className="h-48 w-48 cursor-pointer" src={product?.images[0]} alt="cartImage" height={200} width={200} />
                         </Link>
                   </div>
                   {/*product Image end */}

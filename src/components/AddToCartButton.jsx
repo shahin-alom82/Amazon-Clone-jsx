@@ -38,7 +38,7 @@ const AddToCartButton = ({ className, product }) => {
                   <h1></h1>
                   {
                         existingProduct ?
-                              <div className={twMerge("flex items-center justify-between mt-4", className)}>
+                              <div className={twMerge("flex items-center gap-6 mt-4", className)}>
                                     <button
                                           disabled={existingProduct?.quantity <= 1}
                                           onClick={handleMinus}

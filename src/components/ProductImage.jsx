@@ -25,7 +25,7 @@ const ProductImage = ({ product }) => {
                               </button>
                         ))}
                   </div>
-                  <div className="lg:border-r-2 border-amazonYellow ">
+                  <div>
                         <Image className="lg:h-[400px] lg:w-96" src={imageClick} alt="img" height={200} width={200} />
                   </div>
             </div>

@@ -4,6 +4,8 @@ import { MdOutlineClose } from "react-icons/md";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { fetchData } from "@/hooks";
+import Image from "next/image";
+import PriceFormat from "./PriceFormate";
 
 const SearchInput = () => {
       const [searchQuery, setSearchQuery] = useState("");
@@ -89,10 +91,24 @@ const SearchInput = () => {
                                                       onClick={() => setSearchQuery("")}
                                                       className="flex items-center gap-x-2 text-base font-medium hover:bg-lightText/30 px-3 py-1.5"
                                                 >
-                                                      <CiSearch className="text-lg" /> {item?.title}
+                                                      {/* Product Image */}
+                                                      <Image
+                                                            className="h-14 w-14 border border-gray-300"
+                                                            src={item?.images[0]}
+                                                            alt={item?.title}
+                                                            width={200}
+                                                            height={200}
+                                                      />
+
+                                                      {/* Product Title and Price */}
+                                                      <div className="flex flex-col">
+                                                            <span>{item?.title}</span>
+                                                            <PriceFormat amount={item?.price} />
+                                                      </div>
                                                 </Link>
                                           ))}
                                     </div>
+
                               ) : (
                                     <div className="py-10 px-5">
                                           <p className="text-base">
